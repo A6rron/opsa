@@ -45,14 +45,31 @@ body, html {
 @media (max-width: 768px) {
     .container {
         flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
     }
     
     .square-img {
+        width: 70vmin; /* Adjust image size for mobile */
+        height: 70vmin;
         margin-right: 0;
-        margin-bottom: 20px; /* Add space below the image on smaller screens */
+        margin-bottom: 30px; /* Increase space below the image on smaller screens */
     }
     
     .text {
         max-width: 100%; /* Allow text to take full width on smaller screens */
+        font-size: 1rem; /* Adjust font size for mobile */
+        text-align: center; /* Center-align text on mobile */
+        padding: 0 15px; /* Add some horizontal padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .square-img {
+        width: 80vmin; /* Further adjust image size for very small screens */
+        height: 80vmin;
+    }
+    
+    .text {
+        font-size: 0.9rem; /* Further reduce font size for very small screens */
     }
 }
