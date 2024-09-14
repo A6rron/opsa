@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Align items to the center vertically */
+    max-width: 80vw; /* Ensure the container does not exceed viewport width */
+    flex-wrap: wrap; /* Allow content to wrap */
+    padding: 20px; /* Add padding around the container */
+}
+
+.square-img {
+    width: 50vmin; /* Reduced size for better balance */
+    height: 50vmin;
+    background-size: cover;
+    background-position: center;
+    margin-right: 40px; /* Increased space between the image and text */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.4rem; /* Increased font size for better readability */
+    color: #000000;
+    flex: 1; /* Allow text to take up remaining space */
+    max-width: 50%; /* Limit text width for better readability */
+    line-height: 1.6; /* Improve line spacing for readability */
+    display: flex;
+    flex-direction: column; /* Stack text content vertically */
+    justify-content: center; /* Center text content vertically */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    
+    .square-img {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add space below the image on smaller screens */
+    }
+    
+    .text {
+        max-width: 100%; /* Allow text to take full width on smaller screens */
+    }
+}
