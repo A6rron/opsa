@@ -15,61 +15,50 @@ body, html {
 
 .container {
     display: flex;
-    align-items: center; /* Align items to the center vertically */
-    max-width: 80vw; /* Ensure the container does not exceed viewport width */
-    flex-wrap: wrap; /* Allow content to wrap */
-    padding: 20px; /* Add padding around the container */
+    align-items: center;
+    max-width: 90vw; /* Increased from 80vw for slightly more width on mobile */
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .square-img {
-    width: 50vmin; /* Reduced size for better balance */
+    width: 50vmin;
     height: 50vmin;
     background-size: cover;
     background-position: center;
-    margin-right: 40px; /* Increased space between the image and text */
-    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-right: 40px;
+    flex-shrink: 0;
 }
 
 .text {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 1.4rem; /* Increased font size for better readability */
+    font-size: 1.4rem;
     color: #000000;
-    flex: 1; /* Allow text to take up remaining space */
-    max-width: 50%; /* Limit text width for better readability */
-    line-height: 1.6; /* Improve line spacing for readability */
+    flex: 1;
+    max-width: 50%;
+    line-height: 1.6;
     display: flex;
-    flex-direction: column; /* Stack text content vertically */
-    justify-content: center; /* Center text content vertically */
+    flex-direction: column;
+    justify-content: center;
 }
 
-@media (max-width: 768px) {
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center; /* Center items horizontally */
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .square-img {
-        width: 70vmin; /* Adjust image size for mobile */
-        height: 70vmin;
-        margin-right: 0;
-        margin-bottom: 30px; /* Increase space below the image on smaller screens */
-    }
-    
-    .text {
-        max-width: 100%; /* Allow text to take full width on smaller screens */
-        font-size: 1rem; /* Adjust font size for mobile */
-        text-align: center; /* Center-align text on mobile */
-        padding: 0 15px; /* Add some horizontal padding */
-    }
-}
 
-@media (max-width: 480px) {
     .square-img {
-        width: 80vmin; /* Further adjust image size for very small screens */
+        width: 80vmin;
         height: 80vmin;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
-    
+
     .text {
-        font-size: 0.9rem; /* Further reduce font size for very small screens */
+        font-size: 1.2rem;
+        max-width: 100%;
+        text-align: center;
     }
 }
