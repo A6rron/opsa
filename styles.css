@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +34,8 @@ body, html {
 
 .text {
     font-family: 'Chakra Petch', sans-serif;
+    /* Fallback fonts added */
+    font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
     font-size: 1.4rem;
     color: #000000;
     flex: 1;
