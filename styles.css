@@ -67,6 +67,19 @@ body, html {
     }
 }
 
+/* Additional media query for very small devices */
+@media screen and (max-width: 480px) {
+    .text {
+        font-size: 1rem; /* Smaller font size for very small screens */
+    }
+
+    .footer-text {
+        font-size: 0.8rem; /* Smaller footer text */
+        bottom: 5px; /* Adjusted position */
+        right: 5px; /* Adjusted position */
+    }
+}
+
 .footer-text {
     position: absolute; /* Position it absolutely */
     bottom: 10px; /* 10px from the bottom */
